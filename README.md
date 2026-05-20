@@ -1,2 +1,0 @@
-# iamandanorh
-Prompt de concordância
