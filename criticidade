@@ -1,0 +1,212 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>IAmanda no RH</title>
+
+  <meta property="og:title" content="O prompt que faz o ChatGPT parar de concordar com tudo">
+  <meta property="og:description" content="Menos validação automática. Mais pensamento crítico.">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    }
+
+    body{
+      background:#0f1117;
+      color:#f5f5f5;
+      padding:32px 20px 70px;
+      display:flex;
+      justify-content:center;
+      line-height:1.7;
+    }
+
+    .container{
+      width:100%;
+      max-width:720px;
+    }
+
+    .tag{
+      text-align:center;
+      color:#b388ff;
+      letter-spacing:3px;
+      font-size:13px;
+      margin-bottom:24px;
+      text-transform:uppercase;
+    }
+
+    h1{
+      font-size:42px;
+      line-height:1.1;
+      margin-bottom:28px;
+      text-align:center;
+      font-weight:700;
+    }
+
+    h1 span{
+      color:#7ef0c3;
+    }
+
+    .text{
+      color:#d7d7d7;
+      font-size:18px;
+      margin-bottom:18px;
+    }
+
+    .card{
+      background:#181c25;
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:26px;
+      padding:30px;
+      margin:38px 0;
+    }
+
+    .label{
+      color:#7ef0c3;
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+
+    .prompt{
+      white-space:pre-wrap;
+      color:#f3f3f3;
+      font-size:16px;
+      line-height:1.9;
+    }
+
+    .copy-btn{
+      width:100%;
+      border:none;
+      margin-top:26px;
+      padding:18px;
+      border-radius:18px;
+      background:linear-gradient(135deg,#b388ff,#7ef0c3);
+      color:#0f1117;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      transition:0.2s;
+    }
+
+    .copy-btn:hover{
+      opacity:0.92;
+    }
+
+    .footer{
+      margin-top:50px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .logo{
+      width:240px;
+      max-width:85%;
+      opacity:0.95;
+    }
+
+    @media(max-width:640px){
+
+      h1{
+        font-size:32px;
+      }
+
+      .text{
+        font-size:16px;
+      }
+
+      .card{
+        padding:24px;
+      }
+
+      .logo{
+        width:210px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="tag">
+      @iamandanorh
+    </div>
+
+    <h1>
+      Quando o ChatGPT
+      <span>concorda</span>
+      com tudo.
+    </h1>
+
+    <p class="text">
+      Essa é a parte do prompt responsável por fazer o ChatGPT parar de validar automaticamente tudo que você fala.
+    </p>
+
+    <p class="text">
+      O objetivo não é deixar a IA “mais fria”. É fazer ela pensar com mais critério.
+    </p>
+
+    <div class="card">
+
+      <div class="label">
+        Prompt
+      </div>
+
+      <div class="prompt" id="promptText">Antes de concordar com qualquer ideia, proposta ou opinião apresentada, analise criticamente o contexto, os objetivos e as implicações. Evite validação automática e elogio genérico.
+
+Atue como conselheiro estratégico: avalie pontos fortes, pontos fracos, riscos e oportunidades de melhoria. Traga contrapontos construtivos e sugestões práticas.</div>
+
+      <button class="copy-btn" onclick="copyPrompt()">
+        Copiar prompt
+      </button>
+
+    </div>
+
+    <div class="footer">
+
+      <img 
+        src="logo.png"
+        alt="IAmanda no RH"
+        class="logo"
+      >
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function copyPrompt(){
+
+      const text = document.getElementById("promptText").innerText;
+
+      navigator.clipboard.writeText(text);
+
+      const btn = document.querySelector(".copy-btn");
+
+      btn.innerText = "Prompt copiado";
+
+      setTimeout(() => {
+        btn.innerText = "Copiar prompt";
+      }, 2000);
+
+    }
+
+  </script>
+
+</body>
+</html>
