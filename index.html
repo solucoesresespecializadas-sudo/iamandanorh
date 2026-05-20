@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>IAmanda no RH</title>
 
+  <meta property="og:title" content="O prompt que faz o ChatGPT parar de concordar com tudo">
+  <meta property="og:description" content="Menos validação automática. Mais pensamento crítico.">
+  
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -17,29 +22,29 @@
       background:#0f1117;
       color:#f5f5f5;
       padding:32px 20px 80px;
-      line-height:1.6;
       display:flex;
       justify-content:center;
+      line-height:1.7;
     }
 
     .container{
       width:100%;
-      max-width:760px;
+      max-width:720px;
     }
 
     .tag{
-      color:#b388ff;
-      font-size:14px;
-      letter-spacing:3px;
-      margin-bottom:24px;
-      text-transform:uppercase;
       text-align:center;
+      color:#b388ff;
+      letter-spacing:3px;
+      font-size:13px;
+      margin-bottom:22px;
+      text-transform:uppercase;
     }
 
     h1{
       font-size:42px;
       line-height:1.1;
-      margin-bottom:24px;
+      margin-bottom:26px;
       text-align:center;
       font-weight:700;
     }
@@ -48,10 +53,10 @@
       color:#7ef0c3;
     }
 
-    .intro{
+    .text{
+      color:#d8d8d8;
       font-size:18px;
-      color:#d1d1d1;
-      margin-bottom:28px;
+      margin-bottom:18px;
     }
 
     .card{
@@ -59,32 +64,32 @@
       border:1px solid rgba(255,255,255,0.06);
       border-radius:24px;
       padding:28px;
-      margin:32px 0;
+      margin:36px 0;
     }
 
-    .prompt-title{
-      font-size:14px;
-      text-transform:uppercase;
-      letter-spacing:2px;
+    .label{
       color:#7ef0c3;
-      margin-bottom:16px;
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:18px;
     }
 
     .prompt{
       white-space:pre-wrap;
-      font-size:15px;
-      color:#f1f1f1;
-      line-height:1.8;
+      color:#f3f3f3;
+      font-size:16px;
+      line-height:1.9;
     }
 
     .copy-btn{
       width:100%;
-      margin-top:24px;
       border:none;
-      background:linear-gradient(135deg,#b388ff,#7ef0c3);
-      color:#0f1117;
+      margin-top:24px;
       padding:18px;
       border-radius:18px;
+      background:linear-gradient(135deg,#b388ff,#7ef0c3);
+      color:#0f1117;
       font-size:16px;
       font-weight:700;
       cursor:pointer;
@@ -92,23 +97,13 @@
     }
 
     .copy-btn:hover{
-      opacity:0.9;
-      transform:translateY(-1px);
-    }
-
-    .list{
-      margin-top:20px;
-    }
-
-    .list div{
-      margin-bottom:10px;
-      color:#d6d6d6;
+      opacity:0.92;
     }
 
     .footer{
-      margin-top:48px;
+      margin-top:42px;
       text-align:center;
-      color:#8f8f8f;
+      color:#8e8e8e;
       font-size:14px;
     }
 
@@ -118,7 +113,7 @@
         font-size:32px;
       }
 
-      .intro{
+      .text{
         font-size:16px;
       }
 
@@ -129,13 +124,16 @@
     }
 
   </style>
+
 </head>
 
 <body>
 
   <div class="container">
 
-    <div class="tag">@iamandanorh</div>
+    <div class="tag">
+      @iamandanorh
+    </div>
 
     <h1>
       Quando o ChatGPT
@@ -143,38 +141,28 @@
       com tudo.
     </h1>
 
-    <p class="intro">
-      Eu comecei a configurar o meu ChatGPT para agir menos como um assistente complacente e mais como alguém que realmente tensiona ideias, aponta riscos e melhora raciocínio.
+    <p class="text">
+      Essa é a parte do prompt responsável por fazer o ChatGPT parar de validar automaticamente tudo que você fala.
     </p>
 
-    <p class="intro">
-      O prompt abaixo é o que eu uso hoje.
+    <p class="text">
+      O objetivo não é deixar a IA “mais fria”. É fazer ela pensar com mais critério.
     </p>
 
     <div class="card">
 
-      <div class="prompt-title">
+      <div class="label">
         Prompt
       </div>
 
       <div class="prompt" id="promptText">Antes de concordar com qualquer ideia, proposta ou opinião apresentada, analise criticamente o contexto, os objetivos e as implicações. Evite validação automática e elogio genérico.
 
-Atue como conselheiro estratégico: avalie pontos fortes, pontos fracos, riscos e oportunidades de melhoria. Traga contrapontos construtivos e sugestões práticas.
-
-Escreva como uma pessoa inteligente, específica e claramente humana. Tom amigável, perspicaz e natural, como alguém experiente conversando com outro profissional, não como texto corporativo otimizado. Corte qualquer frase que não acrescenta valor real. Evite frases feitas, tom de coach e suspense artificial. Nunca use: “não é sobre X, é sobre Y”, “isso muda tudo”, “isso muda o jogo”, tríades do tipo “você trava. procrastina. se sabota.”
-
-Palavras para se evitar ao máximo: destravar, potencializar, transformador, jornada, aprofundar. Varie o tamanho das frases. Misture frases curtas com frases mais longas. Escreva como alguém com repertório, opinião e voz própria. Não como artigo de blog genérico ou IA tentando parecer humana.</div>
+Atue como conselheiro estratégico: avalie pontos fortes, pontos fracos, riscos e oportunidades de melhoria. Traga contrapontos construtivos e sugestões práticas.</div>
 
       <button class="copy-btn" onclick="copyPrompt()">
         Copiar prompt
       </button>
 
-    </div>
-
-    <div class="list">
-      <div>• Uso isso em RH, conteúdo, tomada de decisão e automações com IA.</div>
-      <div>• Prompt sozinho não faz milagre. Contexto e direção continuam importando.</div>
-      <div>• A diferença maior não é “parecer inteligente”. É reduzir resposta genérica.</div>
     </div>
 
     <div class="footer">
@@ -186,7 +174,7 @@ Palavras para se evitar ao máximo: destravar, potencializar, transformador, jor
 
   <script>
 
-    function copyPrompt() {
+    function copyPrompt(){
 
       const text = document.getElementById("promptText").innerText;
 
