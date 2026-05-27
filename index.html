@@ -51,6 +51,12 @@
       line-height:1.6;
     }
 
+    .cards{
+      display:flex;
+      flex-direction:column;
+      gap:22px;
+    }
+
     .card{
       background:#181c25;
       border:1px solid rgba(255,255,255,0.06);
@@ -162,21 +168,41 @@
       Aplicações práticas de IA para pensar melhor, escrever melhor e operar melhor.
     </p>
 
-    <a href="criticidade.html" class="card">
+    <div class="cards">
 
-      <div class="tag">
-        Prompt 01
-      </div>
+      <a href="criticidade.html" class="card">
 
-      <div class="title">
-        Pare o ChatGPT de concordar com tudo
-      </div>
+        <div class="tag">
+          Prompt 01
+        </div>
 
-      <div class="description">
-        Faça a IA analisar contexto, riscos e implicações em vez de validar automaticamente qualquer ideia.
-      </div>
+        <div class="title">
+          Pare o ChatGPT de concordar com tudo
+        </div>
 
-    </a>
+        <div class="description">
+          Faça a IA analisar contexto, riscos e implicações em vez de validar automaticamente qualquer ideia.
+        </div>
+
+      </a>
+
+      <a href="linguagem.html" class="card">
+
+        <div class="tag">
+          Prompt 02
+        </div>
+
+        <div class="title">
+          Faça o ChatGPT escrever menos artificial
+        </div>
+
+        <div class="description">
+          Configure a IA para escrever de forma mais natural, específica e menos genérica.
+        </div>
+
+      </a>
+
+    </div>
 
     <div class="cta">
 
